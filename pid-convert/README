@@ -1,0 +1,36 @@
+.______________________________________________________________________________.
+ 
+   nnnn,       oooooooooo  mmmmmmmmmmmmm  uuuu  uuuu  uuuu  uuuu  ssssssssss
+   nnnnnnnnnn  oooo``oooo  mmm` mmm` mmm  uuuu  ....  uuuu  ....  ssss `ssss
+   nnnnnnnnnn  oooo  oooo  mmm  mmm  mmm  uuuu  uuuu  uuuu  uuuu  ssss  ````
+   nnnn``nnnn  oooo  oooo  mmm  mmm  mmm  uuuu  uuuu  uuuu  uuuu  ssssssssss
+   nnnn  nnnn  oooo  oooo  mmm  mmm  mmm  uuuu  uuuu  uuuu  uuuu  .... `ssss
+   nnnn  nnnn  oooo  oooo  mmm  mmm  mmm  uuuu  uuuu  uuuu  uuuu  ssss  ssss
+   nnnn  nnnn  oooo  oooo  mmm  mmm  mmm  uuuu  uuuu  uuuu  uuuu  ssss  ssss
+   nnnn  nnnn  oooo  oooo  mmm  mmm  mmm  uuuu  uuuu  uuuu  uuuu  ssss  ssss
+   nnnn  nnnn  oooo  oooo  mmm  mmm  mmm  uuuu  uuuu  uuuu  uuuu  ssss  ssss
+   nnnn  ....  oooo  oooo  mmm  mmm  mmm  uuuu..uuuu  uuuu..uuuu  ssss  ssss
+   nnnn  nnnn  oooo..oooo  mmm  mmm  ...  uuuuuuuuuu  uuuuuuuuuu  ssss..ssss
+   nnnn  nnnn  oooooooooo  mmm  mmm  mmm  ```` `uuuu  ```` `uuuu  ssssssssss
+                            ._________________________________________________.
+____________________________|                                                 |_
+---:| 2011-05-15 |======::::| PID Convert - Converts GUIDs to Patch IDs       |:
+                            |_________________________________________________|
+                            `                                 `-[ CMD/Batch ]-`
+
+Certain hotfix installers for patches, typically MSP, will include a unique
+patch code that identifies it within the registry as being installed.  The
+caveat however is that the patch code GUID must be converted into certain
+format in order to locate it in the installer patch registry; specifically
+"HKLM\SOFTWARE\Classes\Installer\Patches".  This tool taks a given patch code
+and converts it into the appropriate format in order to identify the patch
+as being installed.
+
+
+---=:[ Usage/Examples ]::---===================================================-
+
+TODO
+
+---=:[ Credits ]::---==========================================================-
+
++ Nomuus header logo derived from Phr33's nfo design and modified by nomuus.
