@@ -18,11 +18,11 @@ ____________________________|                                                 |_
                             |_________________________________________________|
                             `                                 `-[ CMD/Batch ]-`
 
-Certain hotfix installers for patches, typically MSP, will include a unique
+Certain hotfix installers for patches, typically an MSP, will include a unique
 patch code that identifies it within the registry as being installed.  The
 caveat however is that the patch code GUID must be converted into certain
-format in order to locate it in the installer patch registry; specifically
-"HKLM\SOFTWARE\Classes\Installer\Patches".  This tool taks a given patch code
+format in order to locatethe installer patch registry key; specifically
+"HKLM\SOFTWARE\Classes\Installer\Patches".  This tool takes a given patch code
 and converts it into the appropriate format in order to identify the patch
 as being installed.
 
