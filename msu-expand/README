@@ -1,0 +1,76 @@
+.______________________________________________________________________________.
+ 
+   nnnn,       oooooooooo  mmmmmmmmmmmmm  uuuu  uuuu  uuuu  uuuu  ssssssssss
+   nnnnnnnnnn  oooo``oooo  mmm` mmm` mmm  uuuu  ....  uuuu  ....  ssss `ssss
+   nnnnnnnnnn  oooo  oooo  mmm  mmm  mmm  uuuu  uuuu  uuuu  uuuu  ssss  ````
+   nnnn``nnnn  oooo  oooo  mmm  mmm  mmm  uuuu  uuuu  uuuu  uuuu  ssssssssss
+   nnnn  nnnn  oooo  oooo  mmm  mmm  mmm  uuuu  uuuu  uuuu  uuuu  .... `ssss
+   nnnn  nnnn  oooo  oooo  mmm  mmm  mmm  uuuu  uuuu  uuuu  uuuu  ssss  ssss
+   nnnn  nnnn  oooo  oooo  mmm  mmm  mmm  uuuu  uuuu  uuuu  uuuu  ssss  ssss
+   nnnn  nnnn  oooo  oooo  mmm  mmm  mmm  uuuu  uuuu  uuuu  uuuu  ssss  ssss
+   nnnn  nnnn  oooo  oooo  mmm  mmm  mmm  uuuu  uuuu  uuuu  uuuu  ssss  ssss
+   nnnn  ....  oooo  oooo  mmm  mmm  mmm  uuuu..uuuu  uuuu..uuuu  ssss  ssss
+   nnnn  nnnn  oooo..oooo  mmm  mmm  ...  uuuuuuuuuu  uuuuuuuuuu  ssss..ssss
+   nnnn  nnnn  oooooooooo  mmm  mmm  mmm  ```` `uuuu  ```` `uuuu  ssssssssss
+                            ._________________________________________________.
+____________________________|                                                 |_
+---:| 2010-05-16 |======::::| MSU Expand - Automated Microsoft MSU Extraction |:
+                            |_________________________________________________|
+                            `                                 `-[ CMD/Batch ]-`
+
+Microsoft Windows Vista and newer introduced a installation infrastructure named
+Component-Based Servicing (CBS) whereby patches/updates are included within a
+single package, formally dubbed Microsoft Update Standalone Package.  For those
+interested in the updated files within a patch (e.g. for binary diffing, patch
+patch analysis), the pre-Vista hotfix extraction methods (i.e. "/x", "/extract")
+will no longer suffice.  To assist a script has been created to automate the
+process of extracting standalone updates.
+
+MSU Expander batch script was created to automate the process of extracting 
+multiple MSU patch files using the Expansion Utility. Typically one would need 
+to use expand to extract the CAB file, then from that CAB file extract the 
+desired file.  This batch script does the tedious tasks associated with the 
+process so more time can be spent examining patched files rather than 
+extracting/expanding them.
+
+The batch script will:
+1) Determine if expand.exe exists and it is 6.x or higher.
+2) Initialize and parse command line arguments.
+3) Loop through the file names (i.e. matching source specification)
+   in the current working directory.
+4) Determine the CAB file name within the MSU file.
+5) Create any needed output directories using the original file name.
+6) Expand the CAB file from the MSU file.
+7) Expand from the CAB file any of the desired user-specified files.
+8) Delete the CAB file, and repeat if there are more MSU files.
+
+Troubleshooting?  (Remember...this is a BATCH FILE).
+Redirect the output to stderr, 2> err.txt
+
+
+---=:[ Usage/Examples ]::---===================================================-
+
+msu-expand.bat Files [Source]
+
+ Files  Files to expand from MSU cab file.
+        Use * for all files.
+Source  Source file specification. Wildcards may be used.
+        Default, *KB*.msu
+
+
+msu-expand.bat *
+
+  Expand every file from MSU files matching default source (*KB*.msu).
+
+msu-expand.bat * Windows6.0-*.msu
+
+  Expand every file from MSU files matching Windows6.0-*.msu.
+
+msu-expand.bat inetcomm.dll *KB978542*.msu
+
+  Expand inetcomm.dll from MSU files matching *KB978542*.msu.
+
+
+---=:[ Credits ]::---==========================================================-
+
++ Nomuus header logo derived from Phr33's nfo design and modified by nomuus.
