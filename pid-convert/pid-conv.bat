@@ -29,7 +29,7 @@
 :: endlocal&set liame=&set email=&goto :eof
 :: @echo end uncomment to show obfuscated address.
 ::
-set VERSION=1.0.6.0
+set VERSION=1.0.6.3
 ::
 ::
 ::
