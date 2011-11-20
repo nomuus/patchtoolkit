@@ -134,7 +134,7 @@ goto :EOF
 :: License:  None
 :: URL:  http://blogs.msdn.com/b/joshpoley/archive/2011/06/29/hex-conversion-via-a-batch-file.aspx
 ::
-:: Modifiations:
+:: Modifications:
 :: nomuus/11-15-2011/1.0.0.0 -- Input validation, Zero pad, Function enhancement, Minor tweaks
 ::
 :: Func: This will return the hex representation of the number.
