@@ -55,9 +55,9 @@ if not "%~1" == "" (
 	echo.by selecting "View", "Summary Information", then "Patch Code"
 	echo.
 	echo.Examples
-	echo.%~n0%~x0 {0123456789ABC-DEF0-1234-56789ABCDEF0}
-	echo.%~n0%~x0 0123456789ABC-DEF0-1234-56789ABCDEF0
-	echo.%~n0%~x0 0123456789ABCDEF0123456789ABCDEF0
+	echo.%~n0%~x0 {0123456789ABC-DEF0-1234-56789ABCDEF}
+	echo.%~n0%~x0 0123456789ABC-DEF0-1234-56789ABCDEF
+	echo.%~n0%~x0 0123456789ABCDEF0123456789ABCDEF
 	goto :DONE
 )
 
